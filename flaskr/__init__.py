@@ -33,7 +33,7 @@ postgresdb = psycopg2.connect(
     user=POSTGRESUSER,
     password=POSTGRESPASS)
 '''
-
+print("hola")
 #Cambiar por Path Absoluto en el servidor
 QUERIES_FILENAME = '/var/www/flaskr/queries'
 
