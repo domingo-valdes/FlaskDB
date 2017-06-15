@@ -11,7 +11,7 @@
   "database": "mongo",
   "description":
   "2. Dado un numero y un entero k, los k ultimos mensajes de ese numero",
-  "query": "entidades.find({'numero':'50283971'},{}).limit(5)"
+  "query": "entidades.find({},{'contenido':1, 'fecha':1}).limit(5).sort('fecha',1)"
   },
   {
   "name": "Todos los archivos con palabra clave dada",
@@ -19,11 +19,5 @@
   "description":
   "Dada una palabra clave, todos los JSON en los que aparece esa palabra clave en el contenido",
   "query": "entidades.find({'numero':'50283971'},{'fecha':1}).limit(5).sort('fecha',1)"
-  },
-  {
-    "name": "sasasasa",
-    "database": "postgres",
-    "description": "Una muy breve descripción",
-    "query": "SELECT * FROM mytable;"
   }
 ]
