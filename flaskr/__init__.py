@@ -18,7 +18,8 @@ app = create_app()
 
 # REPLACE WITH YOUR DATABASE NAME
 MONGODATABASE = "test"
-MONGOSERVER = "localhost"
+#MONGOSERVER = "localhost"
+MONGOSERVER = "http://query17-12.ing.puc.cl/"
 MONGOPORT = 27017
 client = MongoClient(MONGOSERVER, MONGOPORT)
 mongodb = client[MONGODATABASE]
