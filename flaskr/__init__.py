@@ -24,6 +24,9 @@ MONGOPORT = 27017
 client = MongoClient(MONGOSERVER, MONGOPORT)
 mongodb = client[MONGODATABASE]
 
+collection = mongodb["test"]
+collection.create_index([('contenido', 'text')])
+
 ''' # Uncomment for postgres connection
 # REPLACE WITH YOUR DATABASE NAME, USER AND PASS
 POSTGRESDATABASE = "mydatabase"
