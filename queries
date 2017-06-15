@@ -4,7 +4,22 @@
   "database": "mongo",
   "description":
   "1. Dada una fecha, todos los numeros para los que se tienen mensajes en esa fecha",
-  "query": "entidades.find({'fecha':'2017-06-21'},{})"
+  "query": "db.entidades.find({'fecha':'2017-06-21'},{})"
+  },
+  {
+  "name": "Dado un numero y un entero k, ultimos k mensajes de ese numero",
+  "database": "mongo",
+  "description":
+  "2. Dado un numero y un entero k, los k ultimos mensajes de ese numero",
+  "query": "entidades.find().limit(5)"
+  },
+    {
+  "name": "Todos los archivos con palabra clave dada",
+  "database": "mongo",
+  "description":
+  "Dada una palabra clave, todos los JSON en los que aparece esa palabra clave en el
+contenido",
+  "query": "entidades.find().limit(5)"
   },
   {
     "name": "sasasasa",
