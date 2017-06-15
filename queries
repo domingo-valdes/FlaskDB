@@ -11,14 +11,14 @@
   "database": "mongo",
   "description":
   "2. Dado un numero y un entero k, los k ultimos mensajes de ese numero",
-  "query": "entidades.find({},{'fecha':1, 'contenido':1}).limit(100).sort('fecha',1)"
+  "query": "entidades.find({'numero':'50283971'},{'fecha':1, 'contenido':1}).limit(100).sort('fecha',-1)"
   },
   {
   "name": "Todos los archivos con palabra clave dada",
   "database": "mongo",
   "description":
   "Dada una palabra clave, todos los JSON en los que aparece esa palabra clave en el contenido",
-  "query": "entidades.find({'numero':'50283971'},{'fecha':1}).limit(5).sort('fecha',1)"
+  "query": "entidades.find({$text: {$search: "borracho"}},{})"
   },
   {
     "name": "sasasasa",
