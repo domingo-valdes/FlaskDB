@@ -4,7 +4,7 @@
   "database": "mongo",
   "description":
   "1. Dada una fecha, todos los numeros para los que se tienen mensajes en esa fecha",
-  "query": "myCollection.find()"
+  "query": "entidades.find({'fecha':'2017-06-21'},{})"
   },
   {
     "name": "sasasasa",
