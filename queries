@@ -4,7 +4,14 @@
   "database": "mongo",
   "description":
   "1. Dada una fecha, todos los numeros para los que se tienen mensajes en esa fecha",
-  "query": "db.entidades.find({'fecha':'2017-06-21'},{})"
+  "query": "entidades.find({'fecha':'2017-06-21'},{})"
+  },
+  {
+  "name": "Dado un numero y un entero k, ultimos k mensajes de ese numero",
+  "database": "mongo",
+  "description":
+  "2. Dado un numero y un entero k, los k ultimos mensajes de ese numero",
+  "query": "entidades.find({'numero':'50283971'},{}).sort({'fecha':1}).limit(5)"
   },
   {
     "name": "sasasasa",
