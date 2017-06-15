@@ -18,6 +18,6 @@
   "database": "mongo",
   "description":
   "Dada una palabra clave, todos los JSON en los que aparece esa palabra clave en el contenido",
-  "query": "entidades.find({'$text': {'$search': 'borracho'}},{})"
+  "query": "entidades.find({'$text': {'$search': 'borracho'}},{'numero':1, 'fecha':1, 'ciudad':1 , 'contenido':1})"
   }
 ]
