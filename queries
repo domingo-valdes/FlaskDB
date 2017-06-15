@@ -1,10 +1,10 @@
 [
   {
   "name": "Todos los numeros en cierta fecha",
-  "database": "test",
+  "database": "mongo",
   "description":
   "1. Dada una fecha, todos los numeros para los que se tienen mensajes en esa fecha",
-  "query": "entidades.find({'fecha':'2017-06-21'},{})"
+  "query": "entidades.find().limit(5)"
   },
   {
     "name": "sasasasa",
