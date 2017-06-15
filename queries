@@ -17,20 +17,13 @@
   "name": "Todos los archivos con palabra clave dada",
   "database": "mongo",
   "description":
-  "Dada una palabra clave, todos los JSON en los que aparece esa palabra clave en el
-   contenido",
-  "query": "db.entidades.find({'numero':'50283971'},{}).sort({'fecha':1}).limit(5)"
+  "Dada una palabra clave, todos los JSON en los que aparece esa palabra clave en el contenido",
+  "query": "entidades.find({'numero':'50283971'},{}).sort({'fecha':1}).limit(5)"
   },
   {
     "name": "sasasasa",
     "database": "postgres",
     "description": "Una muy breve descripción",
     "query": "SELECT * FROM mytable;"
-  },
-  {
-    "name": "Sebastián",
-    "database": "postgres",
-    "description": "Una consulta de Sebastián 🙋",
-    "query": "SELECT * FROM mytable WHERE nombre='Sebastián';"
   }
 ]
