@@ -100,7 +100,17 @@ def consulta_2():
 	response.headers.add('Access-Control-Allow-Origin','*')
 	return(response)
 
+@app.route('/api/numero/', methods=['GET'])
+def consulta_3():
+    numero = request.args.get('numero')
+    k = request.args.get('k')
 
+    escuchas=mongodb.entidades
+    #entidades.find({'$text': {'$search': 'borracho'}},{'numero':1, 'fecha':1, 'ciudad':1 , 'contenido':1})
+    result = json_util.dumps(escuchas.find({'numero':numero},{'numero':1, 'fecha':1, 'ciudad':1 , 'contenido':1}).limit(k).sort('fecha',-1))
+    response = Response(result)
+    response.headers.add('Access-Control-Allow-Origin','*')
+    return(response)
 
 if __name__ == "__main__":
     app.run()
