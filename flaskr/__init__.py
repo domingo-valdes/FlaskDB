@@ -103,7 +103,7 @@ def consulta_2():
 @app.route('/api/numero/', methods=['GET'])
 def consulta_3():
     numero = request.args.get('numero')
-    k = request.args.get('k')
+    k = int(request.args.get('k'))
 
     escuchas=mongodb.entidades
     #entidades.find({'$text': {'$search': 'borracho'}},{'numero':1, 'fecha':1, 'ciudad':1 , 'contenido':1})
