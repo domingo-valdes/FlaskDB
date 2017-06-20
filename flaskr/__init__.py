@@ -4,7 +4,7 @@ import os
 import sys
 # import psycopg2
 import json
-from rest_framework.response import Response
+
 from bson import json_util
 from pymongo import MongoClient
 from flask import Flask, request, session, g, redirect, url_for, abort, \
@@ -86,7 +86,7 @@ def consulta_1():
 	date = request.args.get('date')
 	escuchas=mongodb.entidades
 	result = json_util.dumps(escuchas.find({'fecha':date},{'numero':1, 'fecha':1, 'ciudad':1 , 'contenido':1}))
-	response = Response(result)
+	response = flask.Response(result)
 	response.headers.add('Access-Control-Allow-Origin','*')
 	return(response)
 
