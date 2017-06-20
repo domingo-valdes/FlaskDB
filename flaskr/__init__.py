@@ -8,7 +8,7 @@ import json
 from bson import json_util
 from pymongo import MongoClient
 from flask import Flask, request, session, g, redirect, url_for, abort, \
-     render_template, flash
+     render_template, flash,Response
 
 
 def create_app():
@@ -86,7 +86,7 @@ def consulta_1():
 	date = request.args.get('date')
 	escuchas=mongodb.entidades
 	result = json_util.dumps(escuchas.find({'fecha':date},{'numero':1, 'fecha':1, 'ciudad':1 , 'contenido':1}))
-	response = flask.Response(result)
+	response = Response(result)
 	response.headers.add('Access-Control-Allow-Origin','*')
 	return(response)
 
