@@ -85,7 +85,7 @@ def example():
 def consulta_1():
 	date = request.args.get('date')
 	escuchas=mongodb.entidades
-	result = json_util.dumps(escuchas.find({'fecha':date},{'numero':1, 'fecha':1, 'ciudad':1 , 'contenido':1}))
+	result = json_util.dumps(escuchas.find({'fecha':date},{'numero':1}))#, 'fecha':1, 'ciudad':1 , 'contenido':1}))
 	response = Response(result)
 	response.headers.add('Access-Control-Allow-Origin','*')
 	return(response)
