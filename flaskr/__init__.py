@@ -92,7 +92,7 @@ def consulta_1():
 
 @app.route('/api/keyword/', methods=['GET'])
 def consulta_2():
-	palabra = request.args.get('keyword')
+	palabra = '"'+request.args.get('keyword')+'"'
 	escuchas=mongodb.entidades
     #entidades.find({'$text': {'$search': 'borracho'}},{'numero':1, 'fecha':1, 'ciudad':1 , 'contenido':1})
 	result = json_util.dumps(escuchas.find({'$text': {'$search': palabra}},{'numero':1, 'fecha':1, 'ciudad':1 , 'contenido':1}))
